@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css'%}">
+    <title>User Account</title>
+</head>
+
+<body>
+    <div style="background-color: #edd097; text-align: center;"><h1>User Account</h1></div>
+
+    <p style="text-align: center; padding-right: 200px; background-color:powderblue; font-size:150%; position:absolute; bottom:0;"><a href="{% url 'home' %}">Home Page</a> |
+        <a href="{% url 'logout' %}">Logout</a>
+        </p>
+
+    <h4 style="text-align: center; padding-top: 100px;">
+        <form action="{% url 'account' %}">
+			<input class='navbutton' type="submit" value="Change Account" />
+		</form>
+    </h4>
+
+    <h4 style="text-align: center;">
+        <form action="{% url 'password' %}">
+			<input class='navbutton' type="submit" value="Change Password" />
+		</form>
+    </h4>
+
+    <h4 style="text-align: center;">
+        <form action="{% url 'balance' %}">
+			<input class='navbutton' type="submit" value="Change Balance" />
+		</form>
+    </h4>
+
+    <!-- <h4 style="text-align: center; padding-top: 100px;"><a href="{% url 'account' %}">Change Account Settings</a></h4>
+    <h4 style="text-align: center;"><a href="{% url 'password' %}">Change Current Password</a></h4>
+    <h4 style="text-align: center;"><a href="{% url 'balance' %}">Change Current Balance</a></h4> -->
+</body>
+
+
+</html>

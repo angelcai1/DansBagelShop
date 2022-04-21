@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css'%}">
+    <title>Dan's Bagel Shop</title>
+</head>
+
+<body>
+  <div id="header"><h1>Dan's Bagel Shop</h1></div>
+
+  <!-- <div class="background-pic">  -->
+  
+    <div id="container">
+      
+      <div id="left">
+      <img src="{% static 'accounts/images/bagelsBG.jpg' %}" alt="Image Not Avaliable"/>
+      </div>
+      
+      <div id="right">
+        <div style="background-color: #edd097; text-align: center;"><h3>Login/Signup</h3></div>
+        <form method="post">
+            {% csrf_token %}
+    
+            {% for field in login_form %}
+              <p>
+                  {{field.label_tag}}
+                  {{field}}
+    
+                  {% if field.help_text %}
+                    <small style="color:grey;">{{field.help_text}}</small>
+                  {% endif %}
+    
+              </p>
+            {% endfor %}
+
+            {% for field in login_form %}
+              {% for error in field.errors %}
+                <p style="color:red;">{{error}}</p>
+              {% endfor %}
+            {% endfor %}
+
+            {% if login_form.non_field_errors %}
+              <div style="color:red;">
+                <p>{{login_form.non_field_errors}}</p>
+              </div>
+            {% endif %}
+            <button text="submit">Login</button>
+        </form>
+        <p style="text-align: center;"><a href="{% url 'register' %}">Register</a></p>
+      </div>
+
+    </div>
+
+  <!-- </div> -->
+</body>
+
+<footer style="text-align: center;">
+  <hr>
+  <p>Dan's Bagel Shop © | 2020</p>
+</footer>
+
+</html>

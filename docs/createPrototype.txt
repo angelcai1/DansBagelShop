@@ -1,0 +1,31 @@
+* Create Account Page
+* User Already Has an Account
+
+-----------------
+|       |       |
+| Menu  | Login |
+|       |       |
+-----------------
+
+Login Page Models:
+	Menu - Menu (which has item models) model
+	Login Form - User Model
+
+User Model:
+	Username
+	Password
+	email
+	
+Webpages	
+Login App -> View Orders App (call it something else)
+
+Process:
+   urls.py - handle views (make it so the project can talk to apps)
+   views.py - handle requests {context: context} (render, context)
+   templates - {% static/style.css %}
+   static - ...
+
+Tasks:
+	Create HTML with form
+	Create User models
+	Use user models in next webpage

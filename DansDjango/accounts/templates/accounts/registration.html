@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css'%}">
+    <title>Dan's Bagel Shop</title>
+
+    {% if request.user.is_authenticated %}
+        <p>Hello, {{request.user.username}} | <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+    <hr>
+</head>
+
+
+<body>
+<h2>Create An Account</h2>
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in registration_form %}
+      <p>
+          {{field.label_tag}}
+          {{field}}
+
+          {% if field.help_text %}
+            <small style="color:grey;">{{field.help_text}}</small>
+          {% endif %}
+
+          {% for error in field.errors %}
+            <p style="color:red;">{{error}}</p>
+          {% endfor %}
+      </p>
+    {% endfor %}
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+
+<footer>
+  <hr>
+  <p>Dan's Bagel Shop © | 2020</p>
+</footer>
+
+</html>

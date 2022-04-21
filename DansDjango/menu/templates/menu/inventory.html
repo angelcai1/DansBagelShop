@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+	<head>
+        <title> Inventory </title>
+		<meta charset="utf-8">
+		<link href="{% static 'menu/css/inventorystyle.css' %}" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class= "black stuff-box shadowed"> <h1>Dan's Inventory</h1> </div>
+		<div class= "white item-box shadowed">
+		{% for option in option_list %}
+			{{option.name}} {{option.quantity}} <br>
+		{% endfor %}
+		<br>
+		<button id="hi" onclick="myFunction()">Fill Inventory</button> 
+		{% comment %} <script>
+		function myFunction(list) {
+			alert(hi);
+		}
+		</script> {% endcomment %}
+		</div>
+
+		<script src="{% static 'menu/js/inventoryscript.js'%}"> </script>
+
+	</body>
+</html>

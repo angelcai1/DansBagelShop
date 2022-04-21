@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+	<head>
+        <title> Orders </title>
+		<meta charset="utf-8">
+		<link href={% static 'orders/css/style.css'%} rel="stylesheet">
+	</head>
+
+	<body>
+		<div class= "black stuff-box shadowed"> <h1>Create an order</h1> </div>
+        {% comment %} @Whoever is working on this
+        You can use javascript or html. If html only, comment out line below :) {% endcomment %}
+		{% comment %} <script src="{% static 'orders/js/script.js'%}"> </script> {% endcomment %}
+	
+    <form action="/bagel/" method="post">
+    {% csrf_token %}
+	{{ form }}
+	<input type="submit" value="Submit">
+     
+
+    <button type="submit">Complete Order</button>
+</form>
+
+
+	</body>
+</html>
