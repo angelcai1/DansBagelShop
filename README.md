@@ -1,21 +1,7 @@
-## Group 1
-# Dan's Bagel Shop ReadMe
-## Organization and Name Scheme
-We have the following folder organization so far:
-- Archive
-- DansDjango
-- docs
-- README.md
+# Dan's Bagel Shop
 
-Archive/ holds folder and files we aren't currently using but want to save.
-DansDjango/ is the Django project that we are running. Within it, we have Django specific folders and files.
-docs/ holds all of our documenation.
-README.md is the file you are currently reading.
-
-## Version-control procedures
-All members of our group have full admin privileges to the project. We handle merge requests when we need to and discuss conflicts.
-We use Git and Github to manage version control.
-
+## Description
+This is a virtual bagel shop web application for customers and employees. Depending on the user, Customer or Employee, the user will see a different homepage. A user is able to make an account and order from the virtual bagel shop. On the employee side, the employee will be able to see a customers order and fulfill an order. 
 ## Tool Stack Description and Setup Procedure
 Since this project is largely web-based, we will have a front-end web development stack of Django, which utilizes Python, and HTML, JavaScript, and CSS. For the database, we will use Django’s built-in SQLite, and interface all of these languages/tools using the model-view-controller software design pattern.
 For the back-end of our web development stack, we will use Nginx and Gunicorn.
@@ -34,5 +20,7 @@ All user account forms currently have all necessary validation in place. User's 
 
 ## System Testing Instructions
 Look at the Build Instructions in this README.md. You can test the whole system using the build instructions and navigating to pages currently implemented.
-## Other Development Notes
-N/A
+## Some Use Cases
+
+### Customer 
+
