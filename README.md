@@ -22,9 +22,16 @@ All user account forms currently have all necessary validation in place. User's 
 Look at the Build Instructions in this README.md. You can test the whole system using the build instructions and navigating to pages currently implemented.
 ## Some Use Cases
 
-### Customer 
+### Manager gives the role of chef to new employee
 
 
 https://user-images.githubusercontent.com/71116096/164388815-1318f131-7678-46c2-a23b-7c96dc259973.mp4
+
+
+### Manager edits the menu
+
+
+https://user-images.githubusercontent.com/71116096/164389068-80327bb9-07ec-4b11-8755-df396e3833ba.mp4
+
 
 
